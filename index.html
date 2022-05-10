@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dropdown Menu </title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<body>
+	
+<div class="wrapper">
+	<div class="navbar">
+		<ul>
+			<li><a href="#" class="a_parent">
+				<div class="wrap">
+					<span class="icon">
+						<i class="fas fa-home" aria-hidden="true"></i>
+					</span>
+					<span class="text">Home</span>
+				</div>
+			</a></li>
+			
+			
+			<li><a href="#" class="a_parent">
+				<div class="wrap">
+					<span class="icon">
+					<i class="fas fa-cog" aria-hidden="true"></i>
+					</span>
+					<span class="text">Settings</span>
+				</div>
+			</a></li>
+			</ul>
+	</div>
+</div>
+<div class="down">
+    <H1>Drop Down Menu With The Help Of JavaScript</H1>
+</div>
+<div class="container">
+<select id="input" onchange="random_function()">
+	<option>----------------- Select STATES-----------------</option>
+	<option>Utter Pradesh</option>
+	<option>Goa</option>
+	<option>Delhi</option>
+	<option>Haryana</option>
+	<option>Jaipur</option>
+	<option>Pune</option>
+</select>
+</div>
+
+	<div class="out">
+		
+   <select id="output" onchange="random_function1()">
+	<option>----- Select District-----</option>
+</div>
+<script>
+	function random_function()
+	{
+		var a=document.getElementById("input").value;
+		if(a==="Utter Pradesh")
+		{
+			var arr=["Gonda","Gorakhpur" ,"BAsti","Ayodhya","Faizabad","Tarabganj"];
+		}
+		else if(a==="Goa")
+		{
+			var arr=["Rampur","Jaipur","Wazirhang","Ramakpurwa","karnipur"];
+		}
+		else if(a==="Delhi")
+		{
+			var arr=["Naya","Bodh","Laddak" ,"Jhilihi","Dummy"];
+		}
+		else if(a==="Haryana")
+		{
+			var arr=["XYZ","Puna","Basti" ,"gonda","makpur"];
+		}
+		else if(a==="Jaipur")
+		{
+			var arr=["Washington","Texas","New York"];
+		}
+		else if(a==="Pune")
+		{
+			var arr=["Washi","Reays","New","old","new","basti"];
+		}
+	 
+		var string="";
+	 
+		for(i=0;i<arr.length;i++)
+		{
+			string=string+"<option value="+arr[i]+">"+arr[i]+"</option>";
+		}
+		document.getElementById("output").innerHTML=string;
+	}
+</script>
+
+<script src="scripts.js"></script>
+
+</body> 
+
+
+
+
